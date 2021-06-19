@@ -1,0 +1,84 @@
+.tools {
+    margin-bottom: 4rem;
+
+    @include phone-only {
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    &__search {
+        background-color: $darkBlueDM;
+        padding: 1.6rem 2rem;
+        border-radius: 5px;
+        width: 40%;
+        box-shadow: 0 2px 5px rgba($veryDarkBlueLM, .1);
+
+        &.light-theme {
+            color: $veryDarkBlueLM;
+            background-color: $veryLightGrayLM;
+
+            input[type=search] {
+                color: $veryDarkBlueLM;
+            }
+        }
+
+        @include phone-only {
+            width: 100%;
+            margin-bottom: 2.6rem;
+        }
+
+        .magnifier {
+            margin-right: 2rem;
+            font-size: 2rem;
+        }
+
+        input[type=search] {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $whiteAll;
+            width: 100%;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &__filter-wrapper {
+        background-color: $darkBlueDM;
+        padding-right: 2.2rem;
+        padding-left: 2.2rem;
+        border: none;
+        border-radius: 5px;
+
+        &.light-theme {
+            background-color: $veryLightGrayLM;
+            box-shadow: 0 2px 5px rgba($veryDarkBlueLM, .1);
+        }
+    }
+
+    &__filter {
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        background-color: $darkBlueDM;
+        border: none;
+        color: $whiteAll;
+        font-size: 1.2rem;
+        letter-spacing: 0.1px;
+        width: 16rem;
+        cursor: default;
+        position: relative;
+
+        &.light-theme {
+            color: $veryDarkBlueLM;
+            background-color: $veryLightGrayLM;
+
+            option {
+                background-color: $veryLightGrayLM;
+            }
+        }
+
+        option {
+            background-color: $darkBlueDM;
+        }
+    }
+}

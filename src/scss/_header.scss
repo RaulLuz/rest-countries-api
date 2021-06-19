@@ -1,0 +1,36 @@
+.header {
+    padding: 3rem 8rem;
+    background-color: $darkBlueDM;
+    margin-bottom: 2.6rem;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(black, .1);
+
+    &.light-theme {
+        color: $veryDarkBlueLM;
+    }
+
+    @include phone-only {
+        padding: 3rem 2rem;
+    }
+
+    &.light-theme {
+        background-color: $veryLightGrayLM;
+    }
+
+    &__logo {
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include phone-only {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__theme {
+        cursor: pointer;
+
+        p {
+            margin-left: 1rem;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Nunito Sans',
+        sans-serif;
+    overflow-x: hidden;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: 1.4rem;
+    background-color: $veryDarkBlueDM;
+    color: $whiteAll;
+    transition: all .2s ease-in-out;
+
+    &.light-theme {
+        background-color: $veryLightGrayLM;
+    }
+}
+
+.container {
+    padding: 0 8rem;
+
+    @include phone-only {
+        padding: 0 2rem;
+    }
+}
+
+// Flexbox
+
+.flex {
+    display: flex;
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// Display
+
+.hide {
+    display: none;
+}
+
+.opacity-hide {
+    opacity: 0;
+    width: 0;
+}
+
+
+// Transition
+
+.transition {
+    transition: all .2s ease-in-out;
+}
+
+.light-theme {
+    transition: all .2s ease-in-out;
+}

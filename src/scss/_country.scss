@@ -1,0 +1,147 @@
+.country-all {
+    background-color: transparent;
+    width: 100%;
+
+    &__link {
+
+        &:visited,
+        :focus,
+        :active {
+            color: $whiteAll;
+        }
+
+        &-back {
+            background-color: $darkBlueDM;
+            border-radius: 5px;
+            padding: .8rem 2.8rem;
+            width: 10.4rem;
+            margin-bottom: 4rem;
+
+            &.light-theme {
+                background-color: $veryLightGrayLM;
+                box-shadow: 0 0 5px rgba($veryDarkBlueLM, .1);
+
+                button {
+                    color: $veryDarkBlueLM;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                color: $whiteAll;
+                cursor: pointer;
+            }
+
+            &-arrow {
+                font-size: 1.8rem;
+
+                &.light-theme {
+                    color: $veryDarkBlueLM;
+                }
+            }
+        }
+    }
+}
+
+.country-all-each-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.country-all-each {
+    justify-self: center;
+    margin: 0 auto;
+    width: 100%;
+
+    @include tablet-landscape-down {
+        flex-direction: column;
+    }
+
+    &.light-theme {
+        color: $veryDarkBlueLM;
+    }
+
+    &__img-wrapper {
+
+        @include tablet-landscape-down {
+            margin-bottom: 2rem;
+        }
+
+        img {
+            width: 56rem;
+            height: 40.3rem;
+
+            @include big-desktop-up {
+                width: 83rem;
+                height: 60.3rem;
+            }
+
+            @include tablet-landscape-down {
+                width: 49rem;
+                height: 35.3rem;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2.6rem;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    &__info {
+        flex-wrap: wrap;
+        padding-left: 13rem;
+
+        @include custom-down {
+            padding-left: 8rem;
+        }
+
+        @include tablet-landscape-down {
+            padding-left: 0;
+        }
+
+        &.light-theme {
+
+            p,
+            span,
+            h2 {
+                color: $veryDarkBlueLM;
+
+            }
+        }
+
+        p {
+            font-weight: 300;
+            color: $veryLightGrayLM;
+
+            span {
+                font-weight: 600;
+                color: $whiteAll;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: .8rem;
+            }
+        }
+
+        &-left {
+            margin-right: 15rem;
+
+            @include big-desktop-up {
+                margin-right: 15rem;
+            }
+
+            @include custom-down {
+                margin-right: 5rem
+            }
+
+            @include tablet-landscape-down {
+                margin-right: 5rem;
+            }
+        }
+    }
+}
